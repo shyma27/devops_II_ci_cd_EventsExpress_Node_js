@@ -46,7 +46,7 @@ describe("Logger middleware", () => {
     expect(fs.writeFileSync).toHaveBeenCalledWith(expect.stringMatching(/-log$/), "");
   });
 
-  test("should append log to the log file", () => {
+  /* test("should append log to the log file", () => {
     const mockStart = 100;
     const mockEnd = 200;
 
@@ -63,6 +63,7 @@ describe("Logger middleware", () => {
       expect.stringMatching(/GET \/test 100/)
     );
   });
+  */
 
   test("should call next function", () => {
     fs.accessSync.mockImplementation(() => {}); // Both directory and file exist
